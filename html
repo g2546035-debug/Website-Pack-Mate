@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Mate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">Pack Mate</a>
+    <p>忘れ物ゼロで、気持ちよく出発しよう。</p>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <p class="eyebrow">LET'S GET READY!</p>
+      <h1>お出かけの準備を<br>はじめよう！</h1>
+      <p class="welcome-text">
+        今日の予定に合わせて、持ち物をチェックしよう。
+      </p>
+    </section>
+
+    <section class="scene-section">
+      <h2>どこへ行く？</h2>
+      <p class="section-description">予定に合ったシーンを選んでね。</p>
+
+      <div class="scene-list">
+        <button class="scene-card active" data-scene="travel">
+          <span class="scene-icon">🧳</span>
+          <span>旅行</span>
+        </button>
+
+        <button class="scene-card" data-scene="school">
+          <span class="scene-icon">🎒</span>
+          <span>学校</span>
+        </button>
+
+        <button class="scene-card" data-scene="event">
+          <span class="scene-icon">🎀</span>
+          <span>イベント</span>
+        </button>
+
+        <button class="scene-card" data-scene="sleepover">
+          <span class="scene-icon">🌙</span>
+          <span>お泊まり</span>
+        </button>
+
+        <button class="scene-card" data-scene="outing">
+          <span class="scene-icon">☀️</span>
+          <span>お出かけ</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="list-section">
+      <div class="list-heading">
+        <div>
+          <p class="eyebrow">MY PACKING LIST</p>
+          <h2 id="list-title">旅行の持ち物</h2>
+        </div>
+        <span class="list-count" id="list-count">0 / 0</span>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-info">
+          <span>準備の進み具合</span>
+          <strong id="progress-text">0%</strong>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="item-list" id="item-list"></div>
+
+      <form id="add-form" class="add-form">
+        <input
+          type="text"
+          id="item-input"
+          placeholder="持ち物を追加する..."
+          maxlength="30"
+        >
+        <button type="submit">＋ 追加</button>
+      </form>
+
+      <p class="complete-message" id="complete-message">
+        あと少し！準備を進めよう
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with  Pack Mate</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

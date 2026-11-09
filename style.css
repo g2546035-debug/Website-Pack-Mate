@@ -1,0 +1,547 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+
+/* =========================
+   基本設定
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F7F6F2;
+  color: #71685F;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+
+.header {
+  height: 82px;
+  padding: 0 8%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 15px rgba(90, 80, 65, 0.04);
+}
+
+.logo {
+  color: #82786D;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #B8ADA0;
+}
+
+.header p {
+  color: #A49B90;
+  font-size: 12px;
+}
+
+/* =========================
+   メインコンテンツ
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 1050px;
+  margin: 60px auto;
+}
+
+/* =========================
+   トップ画面
+========================= */
+
+.welcome {
+  min-height: 260px;
+  padding: 35px 45px;
+  margin-bottom: 55px;
+  border-radius: 24px;
+  background: #EEECE6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: #A49B90;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.welcome h1 {
+  color: #71685F;
+  font-size: 36px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.welcome-text {
+  color: #938A80;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* トップ画面の装飾 */
+
+.welcome-decoration {
+  width: 220px;
+  height: 200px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.decoration-circle {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: #DDD8CE;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.decoration-icon {
+  font-size: 85px;
+  position: absolute;
+  top: 45px;
+  left: 60px;
+}
+
+.decoration-star {
+  color: #A99F91;
+  font-size: 30px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.decoration-heart {
+  color: #A99F91;
+  font-size: 30px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+/* =========================
+   シーン選択
+========================= */
+
+.scene-section {
+  margin-bottom: 55px;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+h2 {
+  color: #71685F;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.section-description {
+  color: #A49B90;
+  font-size: 13px;
+}
+
+.scene-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.scene-card {
+  min-height: 135px;
+  padding: 18px 10px;
+  border: 1px solid #E8E5DE;
+  border-radius: 18px;
+  background: #FFFFFF;
+  color: #71685F;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  box-shadow: 0 4px 14px rgba(90, 80, 65, 0.035);
+  transition: all 0.25s ease;
+}
+
+.scene-card:hover {
+  transform: translateY(-4px);
+  border-color: #C5BDB1;
+}
+
+.scene-card.active {
+  border: 1.5px solid #A99F91;
+  background: #EEECE6;
+}
+
+/* シーン別イラスト */
+
+.scene-illustration {
+  width: 62px;
+  height: 62px;
+  overflow: visible;
+  transition: transform 0.25s ease;
+}
+
+.scene-card:hover .scene-illustration {
+  transform: translateY(-3px) rotate(-3deg);
+}
+
+/* =========================
+   持ち物リスト
+========================= */
+
+.list-section {
+  padding: 35px;
+  border: 1px solid #EEECE6;
+  border-radius: 22px;
+  background: #FFFFFF;
+  box-shadow: 0 5px 20px rgba(90, 80, 65, 0.04);
+}
+
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.list-heading h2 {
+  margin-bottom: 0;
+}
+
+.list-count {
+  padding: 7px 16px;
+  border-radius: 20px;
+  background: #EEECE6;
+  color: #82786D;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================
+   進捗バー
+========================= */
+
+.progress-area {
+  margin-bottom: 28px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #938A80;
+  font-size: 13px;
+}
+
+.progress-info strong {
+  color: #82786D;
+}
+
+.progress-bar {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #EAE8E2;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #C5BDB1, #918577);
+  transition: width 0.3s ease;
+}
+
+/* =========================
+   持ち物一覧
+========================= */
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.item {
+  min-height: 58px;
+  padding: 13px 16px;
+  border: 1px solid #F0EEE9;
+  border-radius: 12px;
+  background: #F9F8F5;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  transition: background 0.2s;
+}
+
+.item:hover {
+  background: #F2F0EA;
+}
+
+.item input {
+  width: 17px;
+  height: 17px;
+  accent-color: #82786D;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.item-name {
+  flex: 1;
+  color: #71685F;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.item.checked .item-name {
+  color: #B8B1A8;
+  text-decoration: line-through;
+}
+
+/* 削除ボタン */
+
+.delete-button {
+  border: none;
+  background: transparent;
+  color: #B8B1A8;
+  font-size: 19px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete-button:hover {
+  color: #82786D;
+}
+
+/* =========================
+   持ち物追加フォーム
+========================= */
+
+.add-form {
+  display: flex;
+  gap: 10px;
+}
+
+.add-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 1px solid #DCD8D0;
+  border-radius: 11px;
+  background: #FFFFFF;
+  color: #71685F;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.add-form input::placeholder {
+  color: #B8B1A8;
+}
+
+.add-form input:focus {
+  border-color: #A99F91;
+}
+
+.add-form button {
+  padding: 0 23px;
+  border: none;
+  border-radius: 11px;
+  background: #82786D;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-form button:hover {
+  background: #71685F;
+}
+
+/* =========================
+   完了メッセージ
+========================= */
+
+.complete-message {
+  margin-top: 22px;
+  color: #A49B90;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* =========================
+   下部メッセージ
+========================= */
+
+.bottom-message {
+  padding: 55px 10px;
+  text-align: center;
+}
+
+.bottom-message p {
+  color: #82786D;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.bottom-message span {
+  display: block;
+  margin-top: 8px;
+  color: #A49B90;
+  font-size: 12px;
+}
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+  padding: 28px;
+  background: #EEECE6;
+  color: #82786D;
+  text-align: center;
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+footer span {
+  color: #A99F91;
+}
+
+footer small {
+  color: #A49B90;
+  font-size: 10px;
+}
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media (max-width: 700px) {
+
+  .header {
+    min-height: 75px;
+    height: auto;
+    padding: 15px 5%;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .header p {
+    font-size: 11px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 35px auto;
+  }
+
+  .welcome {
+    min-height: 230px;
+    padding: 25px;
+  }
+
+  .welcome h1 {
+    font-size: 28px;
+  }
+
+  .welcome-text {
+    font-size: 11px;
+  }
+
+  .welcome-decoration {
+    width: 110px;
+    height: 140px;
+  }
+
+  .decoration-circle {
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 5px;
+  }
+
+  .decoration-icon {
+    font-size: 55px;
+    top: 42px;
+    left: 22px;
+  }
+
+  .decoration-star {
+    font-size: 20px;
+  }
+
+  .decoration-heart {
+    font-size: 20px;
+  }
+
+  .scene-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .scene-card {
+    min-height: 115px;
+  }
+
+  .scene-illustration {
+    width: 52px;
+    height: 52px;
+  }
+
+  .list-section {
+    padding: 22px 18px;
+  }
+
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-message {
+    padding: 40px 10px;
+  }
+}
